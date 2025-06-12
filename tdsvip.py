@@ -26,7 +26,8 @@ def thanhngang(so):
 
 def banner():
     os.system('cls' if os.name=='nt' else 'clear')
-    print(f'''           \033[1;36m          
+    print(f'''           {luc}© Bản Quyền PHAMQUANGDUNG ! Tool VIPBRO !!!
+\033[1;36m          
 ██████╗   ██████╗  ██████╗  ████████╗ ██████╗  ██████╗ ██╗     
 ██╔══██╗ ██╔═══██╗ ██╔══██╗ ╚══██╔══╝██╔═══██╗██╔═══██╗██║     
 ██████╔╝ ██║   ██║ ██║  ██║    ██║   ██║   ██║██║   ██║██║     
@@ -654,7 +655,6 @@ def Main():
             except:
                 print(f'''{thanh} {luc}Trạng Thái Acc{trang}: {trang}[{red}DIE{trang}]\n{thanh} {luc}Tin Nhắn{trang}: {luc}Đăng Nhập Thất Bại''')
                 os.remove('acc_tds_log.txt')
-                banner()
         if not os.path.exists('acc_tds_log.txt'):
             username, password = input(f'{thanh} {luc}Nhập Tài Khoản TDS{trang}: '), input(f'{thanh} {luc}Nhập Mật Khẩu TDS{trang}: ')
             thanhngang(70)
@@ -675,7 +675,6 @@ def Main():
             os.remove('acc_tds_log.txt')
     thanhngang(70)
     while True:
-        banner()
         if os.path.exists('Cookie_FB.txt'):
             print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Sử Dụng Cookie Facebook Đã Lưu')
             print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Nhập Cookie Facebook Mới')
@@ -723,7 +722,6 @@ def Main():
     listnv.append(nhap)
     thanhngang(70)
     if os.path.exists('settingch.json'):
-        banner()
         with open('settingch.json', 'r') as f:
             config = json.load(f)
             apikey = config['apikey']
@@ -773,7 +771,6 @@ def Main():
         nhiemvuloi = config['nhiemvuloi']
     chonan = input(f'{thanh} {luc}Bạn Có Muốn Ẩn Id Facebook Không {red}({vang}y/n{red}){trang}: {vang}')
     thanhngang(70)
-    banner()
     while True:
         if len(listck) == 0:
             print(f'{red}Đã Xoá Tất Cả Cookie, Vui Lòng Nhập Lại')
